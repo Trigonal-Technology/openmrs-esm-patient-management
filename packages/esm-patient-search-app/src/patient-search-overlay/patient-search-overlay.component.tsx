@@ -2,11 +2,11 @@ import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useConfig, useDebounce } from '@openmrs/esm-framework';
 import { type PatientSearchConfig } from '../config-schema';
+import { useSearchParams } from 'react-router-dom';
 import AdvancedPatientSearchComponent from '../patient-search-page/advanced-patient-search.component';
 import Overlay from '../ui-components/overlay';
 import PatientSearchBar from '../patient-search-bar/patient-search-bar.component';
 import { inferModeFromSearchParams } from '../mpi/utils';
-import { useSearchParams } from 'react-router-dom';
 
 interface PatientSearchOverlayProps {
   onClose: () => void;
