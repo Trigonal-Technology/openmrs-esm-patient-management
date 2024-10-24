@@ -36,8 +36,6 @@ export const patientSearchBar = getSyncLifecycle(patientSearchBarComponent, opti
 export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
 
-  registerFeatureFlag('mpiFlag', 'MPI Service', 'Enables the Master Patient Index workflows');
-
   setupDynamicOfflineDataHandler({
     id: 'esm-patient-search-app:patient',
     type: 'patient',
